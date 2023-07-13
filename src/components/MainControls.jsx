@@ -1,10 +1,12 @@
-export function MainControls(props) {
-  const { onAllOffClick, onAllOnClick } = props;
+import { useContext } from "react";
+import { SmartHomeContext } from "../SmartHomeContext";
+export function MainControls() {
 
+  const {dispatch} = useContext (SmartHomeContext);
   return (
     <div>
-      <button onClick={onAllOffClick}>All Off</button>
-      <button onClick={onAllOnClick}>All On</button>
+      <button onClick={() => dispatch ({type: "alloff"})}> All Off</button>
+      <button onClick={() => dispatch ({type: "allon"})}> All On</button>
     </div>
   );
 }
