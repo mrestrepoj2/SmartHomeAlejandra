@@ -1,12 +1,12 @@
-
 import React, { useContext } from 'react';
 import { SmartHomeContext } from '../SmartHomeContext';
- export function Light({id}) {
+ 
+export function Light({ id }) {
   const { lights, dispatch } = useContext(SmartHomeContext);
   const isOn = lights[id];
 
   const handleOnToggle = () => {
-  dispatch ({ type:"toggle", payload: id });
+  dispatch({ type:"toggle", payload: id });
   };
 
   return (

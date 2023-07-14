@@ -1,4 +1,3 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
-export const SmartHomeContext = createContext({ligths:[false, false, false]});
-
+export const SmartHomeContext = createContext({ lights: [false, false, false] });

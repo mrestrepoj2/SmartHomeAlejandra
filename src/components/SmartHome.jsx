@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
-import { SmartHomeContext } from '../SmartHomeContext';
-import Light from './Light';
+import React from "react";
+import { Light } from "./Light";
+import { SmartHomeContext } from "../SmartHomeContext";
 
 export function SmartHome() {
   const { lights } = React.useContext(SmartHomeContext);
+  console.log(lights);
+
   return (
     <section
     style={{
@@ -14,10 +16,10 @@ export function SmartHome() {
       alignItems: "center",
       paddingTop: "1rem",
     }}>
-    {lights.map((isOn, index) => (
-    <Light key={index} id={index}></Light>
-    ))}
+      
+      {lights.map((isOn, index) => (
+        <Light key={index} id={index} />
+      ))}
     </section>
-    )
-  };
-  
+  );
+}
