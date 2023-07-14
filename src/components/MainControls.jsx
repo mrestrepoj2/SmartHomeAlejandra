@@ -10,3 +10,4 @@ export function MainControls() {
       <button onClick={() => dispatch({ type: "allOn" })}>All On</button>
     </div>
   );
+}
